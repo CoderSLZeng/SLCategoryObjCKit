@@ -22,11 +22,12 @@
  添加一个搜索框
 
  @param frame 搜索框的位置
- @param font 搜索框文字的字体
  @param backgroundImageName 背景图标名称
  @param searchIconImageName 搜索图标名称
  @return 搜索框
  */
-+ (instancetype)sl_searchBarWithFrame:(CGRect)frame font:(UIFont *)font backgroundImageName:(nonnull NSString *)backgroundImageName searchIconImageName:(nonnull NSString *)searchIconImageName;
++ (instancetype)sl_searchBarWithFrame:(CGRect)frame
+                  backgroundImageName:(nonnull NSString *)backgroundImageName
+                  searchIconImageName:(nonnull NSString *)searchIconImageName;
 
 @end

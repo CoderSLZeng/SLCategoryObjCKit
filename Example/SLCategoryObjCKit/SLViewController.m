@@ -32,11 +32,12 @@
 
 - (void)testTextField {
     CGFloat width = [UIScreen mainScreen].bounds.size.width - 40;
-    UIFont *font = [UIFont systemFontOfSize:13.0f];
-    UITextField *customTF = [UITextField sl_searchBarWithFrame:CGRectMake(20, 50, width, 30)
-                                                          font:font
+    CGRect frame = CGRectMake(20, 50, width, 30);
+    UIFont *font = [UIFont systemFontOfSize:9.0f];
+    UITextField *customTF = [UITextField sl_searchBarWithFrame:frame
                                            backgroundImageName:@"searchbar_textfield_background@2x"
                                            searchIconImageName:@"searchbar_textfield_search_icon@2x"];
+    customTF.font = font;
     [self.view addSubview:customTF];
 }
 

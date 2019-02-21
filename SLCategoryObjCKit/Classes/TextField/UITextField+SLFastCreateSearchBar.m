@@ -35,14 +35,24 @@ static NSString * const SLPlaceholderColorKey = @"placeholderLabel.textColor";
  *
  *  @return 搜索框
  */
-+ (instancetype) sl_searchBarWithFrame:(CGRect)frame font:(UIFont *)font backgroundImageName:(nonnull NSString *)backgroundImageName searchIconImageName:(nonnull NSString *)searchIconImageName
++ (instancetype) sl_searchBarWithFrame:(CGRect)frame
+                   backgroundImageName:(nonnull NSString *)backgroundImageName
+                   searchIconImageName:(nonnull NSString *)searchIconImageName
 {
     UITextField *searchBar = [[UITextField alloc] init];
     searchBar.frame        = frame;
-    searchBar.font         = font;
     searchBar.placeholder  = @"请输入搜索内容条件";
     
     NSString *searchBarImageFile = [[NSBundle mainBundle] pathForResource:backgroundImageName ofType:@".png"];
+    
+    if (searchBarImageFile == nil) {
+        NSException *excp = [NSException exceptionWithName:@"pathError"
+                                                    reason:@"调用此方法必须提供一个有效的【背景图标名】参数, 请确认是否添加图片资源"
+                                                  userInfo:nil];
+        [excp raise];
+        return nil;
+    }
+    
     UIImage *searchBarImage = [UIImage imageWithContentsOfFile:searchBarImageFile];
     
     CGFloat searchBarW = searchBarImage.size.width * 0.5;
@@ -55,6 +65,13 @@ static NSString * const SLPlaceholderColorKey = @"placeholderLabel.textColor";
     UIImageView *searchIcon = [[UIImageView alloc] init];
     searchIcon.bounds = CGRectMake(0, 0, 30, 30);
     NSString *iconImageFile = [[NSBundle mainBundle] pathForResource:searchIconImageName ofType:@".png"];
+    if (searchBarImageFile == nil) {
+        NSException *excp = [NSException exceptionWithName:@"pathError"
+                                                    reason:@"调用此方法必须提供一个有效的【搜索图标名】参数, 请确认是否添加图片资源"
+                                                  userInfo:nil];
+        [excp raise];
+        return nil;
+    }
     UIImage *iconImage = [UIImage imageWithContentsOfFile:iconImageFile];
     searchIcon.image = iconImage;
 
