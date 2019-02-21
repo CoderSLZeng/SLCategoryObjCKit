@@ -38,13 +38,13 @@ static NSString * const SLPlaceholderColorKey = @"placeholderLabel.textColor";
 + (instancetype) sl_searchBarWithFrame:(CGRect)frame
                    backgroundImageName:(nonnull NSString *)backgroundImageName
                    searchIconImageName:(nonnull NSString *)searchIconImageName
+                           ofImageType:(NSString *)type
 {
     UITextField *searchBar = [[UITextField alloc] init];
     searchBar.frame        = frame;
     searchBar.placeholder  = @"请输入搜索内容条件";
     
-    NSString *searchBarImageFile = [[NSBundle mainBundle] pathForResource:backgroundImageName ofType:@".png"];
-    
+    NSString *searchBarImageFile = [[NSBundle mainBundle] pathForResource:backgroundImageName ofType:type];
     if (searchBarImageFile == nil) {
         NSException *excp = [NSException exceptionWithName:@"pathError"
                                                     reason:@"调用此方法必须提供一个有效的【背景图标名】参数, 请确认是否添加图片资源"

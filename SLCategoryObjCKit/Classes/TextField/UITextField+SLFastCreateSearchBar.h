@@ -28,6 +28,7 @@
  */
 + (instancetype)sl_searchBarWithFrame:(CGRect)frame
                   backgroundImageName:(nonnull NSString *)backgroundImageName
-                  searchIconImageName:(nonnull NSString *)searchIconImageName;
+                  searchIconImageName:(nonnull NSString *)searchIconImageName
+                          ofImageType:(NSString *)type;
 
 @end

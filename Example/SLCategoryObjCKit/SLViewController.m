@@ -36,7 +36,9 @@
     UIFont *font = [UIFont systemFontOfSize:9.0f];
     UITextField *customTF = [UITextField sl_searchBarWithFrame:frame
                                            backgroundImageName:@"searchbar_textfield_background@2x"
-                                           searchIconImageName:@"searchbar_textfield_search_icon@2x"];
+                                           searchIconImageName:@"searchbar_textfield_search_icon@2x"
+                                                   ofImageType:@"png"];
+
     customTF.font = font;
     [self.view addSubview:customTF];
 }
