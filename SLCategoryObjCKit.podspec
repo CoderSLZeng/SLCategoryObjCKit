@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SLCategoryObjCKit'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = '封装了常用控件的分类库'
 
 # This description is used to generate tags and improve search results.
@@ -60,11 +60,7 @@ Pod::Spec.new do |s|
     end
     
     s.subspec 'TextField' do |textField|
-        textField.source_files = 'SLCategoryObjCKit/Classes/TextField/*.{h,m}'
-        
-        textField.resource_bundles = {
-            'SLCategoryObjCKit' => ['SLCategoryObjCKit/Assets/TextField/*']
-        }
+        textField.source_files = 'SLCategoryObjCKit/Classes/TextField/*.{h,m}'        
     end
     
     s.subspec 'Window' do |window|

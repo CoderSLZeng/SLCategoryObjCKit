@@ -35,31 +35,28 @@ static NSString * const SLPlaceholderColorKey = @"placeholderLabel.textColor";
  *
  *  @return 搜索框
  */
-+ (instancetype)sl_searchBar
++ (instancetype) sl_searchBarWithFrame:(CGRect)frame font:(UIFont *)font backgroundImageName:(nonnull NSString *)backgroundImageName searchIconImageName:(nonnull NSString *)searchIconImageName
 {
     UITextField *searchBar = [[UITextField alloc] init];
-    searchBar.bounds = CGRectMake(0, 0, 300, 30);
-    searchBar.font = [UIFont systemFontOfSize:13.0];
-    searchBar.placeholder = @"请输入搜索内容条件";
+    searchBar.frame        = frame;
+    searchBar.font         = font;
+    searchBar.placeholder  = @"请输入搜索内容条件";
     
-    NSBundle *currentBundle = [NSBundle bundleForClass:[self class]];
-    NSString *bundleName = [currentBundle.infoDictionary[@"CFBundleName"] stringByAppendingString:@".bundle"];
-    
-    NSString *searchBarImagePath = [currentBundle pathForResource:@"searchbar_textfield_background@2x.png" ofType:nil inDirectory:bundleName];
-    UIImage *searchBarImage = [UIImage imageWithContentsOfFile:searchBarImagePath];
+    NSString *searchBarImageFile = [[NSBundle mainBundle] pathForResource:backgroundImageName ofType:@".png"];
+    UIImage *searchBarImage = [UIImage imageWithContentsOfFile:searchBarImageFile];
     
     CGFloat searchBarW = searchBarImage.size.width * 0.5;
     CGFloat searchBarH = searchBarImage.size.height * 0.5;
     
     // 设置背景图片为可拉伸模式的
-    searchBar.background = [searchBarImage resizableImageWithCapInsets:UIEdgeInsetsMake(searchBarH, searchBarW, searchBarH, searchBarW) resizingMode:UIImageResizingModeStretch];
+    searchBar.background = [searchBarImage resizableImageWithCapInsets:UIEdgeInsetsMake(searchBarH, searchBarW, searchBarH, searchBarW)
+                                                          resizingMode:UIImageResizingModeStretch];
     
     UIImageView *searchIcon = [[UIImageView alloc] init];
     searchIcon.bounds = CGRectMake(0, 0, 30, 30);
-    
-    NSString *searchIconImagePath = [currentBundle pathForResource:@"searchbar_textfield_search_icon@2x.png" ofType:nil inDirectory:bundleName];
-    
-    searchIcon.image = [UIImage imageWithContentsOfFile:searchIconImagePath];
+    NSString *iconImageFile = [[NSBundle mainBundle] pathForResource:searchIconImageName ofType:@".png"];
+    UIImage *iconImage = [UIImage imageWithContentsOfFile:iconImageFile];
+    searchIcon.image = iconImage;
 
     // 内容模式居中
     searchIcon.contentMode = UIViewContentModeCenter;
