@@ -8,7 +8,8 @@
 
 #import "SLViewController.h"
 
-#import "UITextField+SLFastCreateSearchBar.h"
+#import <UITextField+SLFastCreateSearchBar.h>
+#import <UIColor+SLExtension.h>
 
 @interface SLViewController ()
 
@@ -20,6 +21,7 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
     
     [self testTextField];
 }
@@ -41,6 +43,10 @@
 
     customTF.font = font;
     [self.view addSubview:customTF];
+}
+    
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    self.view.backgroundColor = UIColor.sl_randomColor;
 }
 
 @end
