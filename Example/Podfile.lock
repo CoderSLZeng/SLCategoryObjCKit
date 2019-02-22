@@ -1,52 +1,15 @@
 PODS:
-  - AFNetworking/Reachability (3.2.1)
-  - SDWebImage (4.4.5):
-    - SDWebImage/Core (= 4.4.5)
-  - SDWebImage/Core (4.4.5)
-  - SLCategoryObjCKit (0.3.0):
-    - SLCategoryObjCKit/BarButtonItem (= 0.3.0)
-    - SLCategoryObjCKit/Button (= 0.3.0)
-    - SLCategoryObjCKit/Calendar (= 0.3.0)
-    - SLCategoryObjCKit/Color (= 0.3.0)
-    - SLCategoryObjCKit/Date (= 0.3.0)
-    - SLCategoryObjCKit/Foundation (= 0.3.0)
-    - SLCategoryObjCKit/Image (= 0.3.0)
-    - SLCategoryObjCKit/ImageView (= 0.3.0)
-    - SLCategoryObjCKit/String (= 0.3.0)
-    - SLCategoryObjCKit/TextField (= 0.3.0)
-    - SLCategoryObjCKit/View (= 0.3.0)
-    - SLCategoryObjCKit/Window (= 0.3.0)
-  - SLCategoryObjCKit/BarButtonItem (0.3.0)
-  - SLCategoryObjCKit/Button (0.3.0)
-  - SLCategoryObjCKit/Calendar (0.3.0)
-  - SLCategoryObjCKit/Color (0.3.0)
-  - SLCategoryObjCKit/Date (0.3.0)
-  - SLCategoryObjCKit/Foundation (0.3.0)
-  - SLCategoryObjCKit/Image (0.3.0)
-  - SLCategoryObjCKit/ImageView (0.3.0):
-    - AFNetworking/Reachability
-    - SDWebImage
-  - SLCategoryObjCKit/String (0.3.0)
-  - SLCategoryObjCKit/TextField (0.3.0)
-  - SLCategoryObjCKit/View (0.3.0)
-  - SLCategoryObjCKit/Window (0.3.0)
+  - SLCategoryObjCKit (0.3.1)
 
 DEPENDENCIES:
   - SLCategoryObjCKit (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - AFNetworking
-    - SDWebImage
 
 EXTERNAL SOURCES:
   SLCategoryObjCKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
-  SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
-  SLCategoryObjCKit: b1f97bdb33fe412a65e2c3cb8dcbb4cfe463d086
+  SLCategoryObjCKit: b462784cf73b83f5278aada90b74825b81bdbfda
 
 PODFILE CHECKSUM: 6c7ac920b5fb0ea60d1908e5ebb3931032505788
 
