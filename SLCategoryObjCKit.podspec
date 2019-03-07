@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SLCategoryObjCKit'
-    s.version          = '0.3.1'
+    s.version          = '0.4.0'
     s.summary          = '封装了常用控件的分类库'
     
     # This description is used to generate tags and improve search results.
@@ -114,6 +114,13 @@ Pod::Spec.new do |s|
             foundation.source_files = 'SLCategoryObjCKit/Classes/Foundation/*.{h,m}'
         end
         
+        s.subspec 'MutableArray' do |array|
+            array.source_files = 'SLCategoryObjCKit/Classes/MutableArray/*.{h,m}'
+        end
+        
+        s.subspec 'MutableDictionary' do |dict|
+            dict.source_files = 'SLCategoryObjCKit/Classes/MutableDictionary/*.{h,m}'
+        end
         
     end
     # s.public_header_files = 'Pod/Classes/**/*.h'
