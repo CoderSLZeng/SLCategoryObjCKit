@@ -7,9 +7,7 @@
 //
 
 #import "SLViewController.h"
-
-#import <UITextField+SLFastCreateSearchBar.h>
-#import <UIColor+SLExtension.h>
+#import <SLCategoryObjCKit/NSString+SLExtension.h>
 
 @interface SLViewController ()
 
@@ -17,35 +15,16 @@
 
 @implementation SLViewController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-- (void)testTextField {
-    CGFloat width = [UIScreen mainScreen].bounds.size.width - 40;
-    CGRect frame = CGRectMake(20, 50, width, 30);
-    UIFont *font = [UIFont systemFontOfSize:9.0f];
-    UITextField *customTF = [UITextField sl_searchBarWithFrame:frame
-                                           backgroundImageName:@"searchbar_textfield_background@2x"
-                                           searchIconImageName:@"searchbar_textfield_search_icon@2x"
-                                                   ofImageType:@"png"];
-
-    customTF.font = font;
-    [self.view addSubview:customTF];
+    NSURL *url = [NSURL URLWithString:@"http://free2.macx.cn:8281/tools/photo/SnapNDragPro418.dmg"];
+    NSString *str = url.absoluteString;
+    NSLog(@"%@", str.sl_md5);
 }
 
 @end

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
     s.name             = 'SLCategoryObjCKit'
-    s.version          = '0.4.0'
+    s.version          = '0.4.1'
     s.summary          = '封装了常用控件的分类库'
     
     # This description is used to generate tags and improve search results.

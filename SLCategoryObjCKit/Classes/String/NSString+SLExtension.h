@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NSString (SLExtension)
 
 /**
@@ -176,15 +178,25 @@
 - (NSString *)sl_htmlEntityDecode;
 
 /** 将HTML字符串转化为NSAttributedString富文本字符串 */
-- (NSAttributedString *)attributedStringFromHTMLString;
+- (NSAttributedString *)sl_attributedStringFromHTMLString;
 
 /** 去掉 HTML 字符串中的标签 */
-- (NSString *)filterHTML;
+- (NSString *)sl_filterHTML;
 
 
 // use demo [htmlString componentsSeparatedFromString:@"<img selector=\"pic\" img-src=\"" toString:@"\" src="];
 /**
  截取html需要的字符串
  */
-- (NSArray *)componentsSeparatedFromString:(NSString *)fromString toString:(NSString *)toString;
+- (NSArray *)sl_componentsSeparatedFromString:(NSString *)fromString toString:(NSString *)toString;
+
+/**
+ 计算md5值计
+
+ @return md5值
+ */
+- (NSString *)sl_md5;
+
+NS_ASSUME_NONNULL_END
+
 @end

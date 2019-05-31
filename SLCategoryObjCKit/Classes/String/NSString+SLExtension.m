@@ -8,6 +8,8 @@
 
 #import "NSString+SLExtension.h"
 
+#import <CommonCrypto/CommonDigest.h>
+
 @implementation NSString (SLExtension)
 
 + (BOOL)sl_isValiMobile:(NSString *)mobile
@@ -353,7 +355,7 @@
     return string;
 }
 
-- (NSAttributedString *)attributedStringFromHTMLString
+- (NSAttributedString *)sl_attributedStringFromHTMLString
 {
     NSDictionary *options = @{ NSDocumentTypeDocumentAttribute : NSHTMLTextDocumentType,
                                NSCharacterEncodingDocumentAttribute :@(NSUTF8StringEncoding) };
@@ -363,7 +365,7 @@
     return [[NSAttributedString alloc] initWithData:data options:options documentAttributes:nil error:nil];
 }
 
-- (NSString *)filterHTML
+- (NSString *)sl_filterHTML
 {
     NSString *html;
     NSScanner *scanner = [NSScanner scannerWithString:html];
@@ -382,7 +384,7 @@
     return html;
 }
 
-- (NSArray *)componentsSeparatedFromString:(NSString *)fromString toString:(NSString *)toString
+- (NSArray *)sl_componentsSeparatedFromString:(NSString *)fromString toString:(NSString *)toString
 {
     if (!fromString || !toString || fromString.length == 0 || toString.length == 0) {
         return nil;
@@ -403,5 +405,18 @@
     return subStringsArray;
 }
 
+- (NSString *)sl_md5 {
+    const char *data = self.UTF8String;
+    int count = CC_MD5_DIGEST_LENGTH;
+    unsigned char md5[count];
+    // 把C语言的字符串 -> md5 c字符串
+    CC_MD5(data, (CC_LONG)strlen(data), md5);
+
+    NSMutableString *result = [NSMutableString stringWithCapacity:count << 1];
+    for (int i = 0; i < count; i++) {
+        [result appendFormat:@"%02x", md5[i]];
+    }
+    return result;
+}
 
 @end
