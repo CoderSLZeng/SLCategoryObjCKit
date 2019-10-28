@@ -450,4 +450,33 @@
     return keymd5;
 }
 
+- (NSMutableArray<NSString *> *)sl_substringsWithBegin:(NSString *)begin
+                                               withEnd:(NSString *)end {
+    
+    NSMutableArray *begins = [NSMutableArray array];
+    NSMutableArray *ends = [NSMutableArray array];
+    NSMutableArray *results = [NSMutableArray array];
+
+    for (int i = 0; i < self.length; i++) {
+        NSString *temp = [self substringWithRange:NSMakeRange(i, 1)];
+        if ([temp isEqualToString:begin]) {
+            [begins addObject:@(i)];
+        }
+        if ([temp isEqualToString:end]) {
+            [ends addObject:@(i)];
+        }
+    }
+    
+    for (id beginObj in begins) {
+        for (id endObj in ends) {
+            if ([beginObj integerValue] < [endObj integerValue]) {
+                NSString *result = [self substringWithRange:NSMakeRange([beginObj integerValue], [endObj integerValue] - [beginObj integerValue] + 1)];
+                [results addObject:result];
+            }
+        }
+    }
+    
+    return results;
+}
+
 @end

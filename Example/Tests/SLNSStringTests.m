@@ -42,7 +42,7 @@
                               @"height"  : @176
                               };
     int aTime = [NSString sl_currentDateByInt];
-    NSString *md5 = [NSString sl_md5ForParamas:paramas time:aTime];
+    NSString *md5 = [NSString sl_md5ForParamas:paramas time:aTime salt:@"ziiiro"];
     NSLog(@"%@", md5);
 }
 
@@ -56,6 +56,14 @@
     NSLog(@"time = %d", time); // 1561601946
     NSString *dateStr = [NSString sl_getNowTimeTimeStamp2Second];
     NSLog(@"%@", dateStr); // @"1561601946"
+}
+
+- (void)testSubstringsOfString {
+    NSString *str = @"abobmsijdojsadasdccxsab";
+    NSArray *results = [str sl_substringsWithBegin:@"a" withEnd:@"b"];
+    for (NSString *result in results) {
+        NSLog(@"%@", result);
+    }
 }
 
 

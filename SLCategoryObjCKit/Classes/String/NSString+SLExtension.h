@@ -210,6 +210,12 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)sl_md5ForParamas:(NSDictionary *)aParamas time:(int)aTime salt:(NSString *)aSalt;
 
+/// 截取字符串数组
+/// @param begin 开始字符
+/// @param end 结束字符
+- (NSMutableArray<NSString *> *)sl_substringsWithBegin:(NSString *)begin
+                                               withEnd:(NSString *)end;
+
 NS_ASSUME_NONNULL_END
 
 @end
