@@ -7,7 +7,6 @@
 //
 
 #import "SLViewController.h"
-#import <SLCategoryObjCKit/NSString+SLExtension.h>
 
 @interface SLViewController ()
 
@@ -20,11 +19,5 @@
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    
-    NSURL *url = [NSURL URLWithString:@"http://free2.macx.cn:8281/tools/photo/SnapNDragPro418.dmg"];
-    NSString *str = url.absoluteString;
-    NSLog(@"%@", str.sl_md5);
-}
 
 @end

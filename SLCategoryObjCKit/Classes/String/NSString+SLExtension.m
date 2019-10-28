@@ -9,6 +9,11 @@
 #import "NSString+SLExtension.h"
 
 #import <CommonCrypto/CommonDigest.h>
+#import <net/if.h>
+#import <net/if_dl.h>
+#import <sys/sysctl.h>
+#import <ifaddrs.h>
+#import <arpa/inet.h>
 
 @implementation NSString (SLExtension)
 
@@ -229,20 +234,32 @@
     return dateString;
 }
 
-+ (NSString *)sl_currentDate
++ (nullable NSString *)sl_currentDate
 {
     return [self sl_getDateWithDateFormat:@"yyyy-MM-dd HH:mm:ss"];
 }
 
-+ (NSString *)sl_currentYear {
+// 获取当前时间
++ (int)sl_currentDateByInt;
+{
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    
+    NSDate *date = [dateFormat dateFromString:[dateFormat stringFromDate:[NSDate date]]];
+    NSTimeInterval dateInterval = [date timeIntervalSince1970];
+    int liDate = (int) dateInterval;
+    return liDate;
+}
+
++ (nullable NSString *)sl_currentYear {
     return [self sl_getDateWithDateFormat:@"yyyy"];
 }
 
-+ (NSString *)sl_currentMonth {
++ (nullable NSString *)sl_currentMonth {
     return [self sl_getDateWithDateFormat:@"MM"];
 }
 
-+ (NSString *)sl_currentDay {
++ (nullable NSString *)sl_currentDay {
     return [self sl_getDateWithDateFormat:@"dd"];
 }
 
@@ -252,7 +269,6 @@
     NSTimeInterval second =[date timeIntervalSince1970];
     NSString *timeString = [NSString stringWithFormat:@"%0.f", second];//转为字符型
     return timeString;
-    
 }
 
 + (nonnull NSString *)sl_getNowTimeTimeStamp2Millisecond {
@@ -417,6 +433,21 @@
         [result appendFormat:@"%02x", md5[i]];
     }
     return result;
+}
+
++ (NSString *)sl_md5ForParamas:(NSDictionary *)aParamas time:(int)aTime salt:(NSString *)aSalt {
+    
+    // NSJSONReadingAllowFragments : 使用这个
+    // NSJSONWritingPrettyPrinted 会有\n，N不需要
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:aParamas
+                                                       options:NSJSONReadingAllowFragments
+                                                         error:nil];
+    NSString *jsonParserString = [[NSString alloc] initWithData:jsonData
+                                                       encoding:NSUTF8StringEncoding];
+    NSString *myString = [NSString stringWithFormat:@"%@%d%@", jsonParserString, aTime, aSalt];
+    NSString *keyMD5 = [myString sl_md5];
+    NSString *keymd5 = [keyMD5 sl_md5];
+    return keymd5;
 }
 
 @end

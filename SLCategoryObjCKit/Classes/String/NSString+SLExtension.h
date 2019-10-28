@@ -91,22 +91,25 @@ NS_ASSUME_NONNULL_BEGIN
  
  @return 当前时间字符串
  */
-+ (NSString *)sl_currentDate;
++ (nullable NSString *)sl_currentDate;
+
+// 获取当前时间
++ (int)sl_currentDateByInt;
 
 /**
  获取当前年份
  */
-+ (NSString *)sl_currentYear;
++ (nullable NSString *)sl_currentYear;
 
 /**
  获取当前月份
  */
-+ (NSString *)sl_currentMonth;
++ (nullable NSString *)sl_currentMonth;
 
 /**
  获取当前日
  */
-+ (NSString *)sl_currentDay;
++ (nullable NSString *)sl_currentDay;
 
 
 /**
@@ -196,6 +199,16 @@ NS_ASSUME_NONNULL_BEGIN
  @return md5值
  */
 - (NSString *)sl_md5;
+
+/**
+ 根据参数计算唯一的md5值，使用的撒盐，2次md5处理，得到的是唯一的不重复的md5值
+ 
+ @param aParamas 字典参数
+ @param aTime 时间戳
+ @param aSalt 撒盐处理
+ @return md5值
+ */
++ (NSString *)sl_md5ForParamas:(NSDictionary *)aParamas time:(int)aTime salt:(NSString *)aSalt;
 
 NS_ASSUME_NONNULL_END
 

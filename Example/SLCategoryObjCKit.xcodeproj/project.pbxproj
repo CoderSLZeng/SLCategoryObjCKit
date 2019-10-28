@@ -22,6 +22,7 @@
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		8C68DE7272C0044DD1ED7008 /* Pods_SLCategoryObjCKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4B7AB2C9AD78E225C0884B3 /* Pods_SLCategoryObjCKit_Example.framework */; };
+		AE4C89B922C365190074C374 /* SLNSStringTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE4C89B822C365190074C374 /* SLNSStringTests.m */; };
 		AE52FC002230A5CF0019AF49 /* SLMutableArrayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE52FBFF2230A5CF0019AF49 /* SLMutableArrayTests.m */; };
 		AE52FC092230AB390019AF49 /* SLMutableDictionaryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AE52FC082230AB390019AF49 /* SLMutableDictionaryTests.m */; };
 		AEB9C4A0221E4E5200EFFA76 /* searchbar_textfield_search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEB9C49E221E4E5200EFFA76 /* searchbar_textfield_search_icon@2x.png */; };
@@ -67,6 +68,7 @@
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0B72BB0ED54E147FE34F25B /* Pods-SLCategoryObjCKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SLCategoryObjCKit_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-SLCategoryObjCKit_Example/Pods-SLCategoryObjCKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		A4B7AB2C9AD78E225C0884B3 /* Pods_SLCategoryObjCKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SLCategoryObjCKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE4C89B822C365190074C374 /* SLNSStringTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLNSStringTests.m; sourceTree = "<group>"; };
 		AE52FBFF2230A5CF0019AF49 /* SLMutableArrayTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLMutableArrayTests.m; sourceTree = "<group>"; };
 		AE52FC082230AB390019AF49 /* SLMutableDictionaryTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SLMutableDictionaryTests.m; sourceTree = "<group>"; };
 		AEB9C49E221E4E5200EFFA76 /* searchbar_textfield_search_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "searchbar_textfield_search_icon@2x.png"; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				AE52FBFF2230A5CF0019AF49 /* SLMutableArrayTests.m */,
 				AE52FC082230AB390019AF49 /* SLMutableDictionaryTests.m */,
 				6003F5B6195388D20070C39A /* Supporting Files */,
+				AE4C89B822C365190074C374 /* SLNSStringTests.m */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 			files = (
 				AE52FC002230A5CF0019AF49 /* SLMutableArrayTests.m in Sources */,
 				AE52FC092230AB390019AF49 /* SLMutableDictionaryTests.m in Sources */,
+				AE4C89B922C365190074C374 /* SLNSStringTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
