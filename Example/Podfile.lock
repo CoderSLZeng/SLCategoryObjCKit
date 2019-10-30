@@ -3,37 +3,39 @@ PODS:
   - SDWebImage (4.4.5):
     - SDWebImage/Core (= 4.4.5)
   - SDWebImage/Core (4.4.5)
-  - SLCategoryObjCKit (0.3.1):
-    - SLCategoryObjCKit/BarButtonItem (= 0.3.1)
-    - SLCategoryObjCKit/Button (= 0.3.1)
-    - SLCategoryObjCKit/Calendar (= 0.3.1)
-    - SLCategoryObjCKit/Color (= 0.3.1)
-    - SLCategoryObjCKit/Date (= 0.3.1)
-    - SLCategoryObjCKit/Foundation (= 0.3.1)
-    - SLCategoryObjCKit/Image (= 0.3.1)
-    - SLCategoryObjCKit/ImageView (= 0.3.1)
-    - SLCategoryObjCKit/MutableArray (= 0.3.1)
-    - SLCategoryObjCKit/MutableDictionary (= 0.3.1)
-    - SLCategoryObjCKit/String (= 0.3.1)
-    - SLCategoryObjCKit/TextField (= 0.3.1)
-    - SLCategoryObjCKit/View (= 0.3.1)
-    - SLCategoryObjCKit/Window (= 0.3.1)
-  - SLCategoryObjCKit/BarButtonItem (0.3.1)
-  - SLCategoryObjCKit/Button (0.3.1)
-  - SLCategoryObjCKit/Calendar (0.3.1)
-  - SLCategoryObjCKit/Color (0.3.1)
-  - SLCategoryObjCKit/Date (0.3.1)
-  - SLCategoryObjCKit/Foundation (0.3.1)
-  - SLCategoryObjCKit/Image (0.3.1)
-  - SLCategoryObjCKit/ImageView (0.3.1):
+  - SLCategoryObjCKit (0.4.1):
+    - SLCategoryObjCKit/Array (= 0.4.1)
+    - SLCategoryObjCKit/BarButtonItem (= 0.4.1)
+    - SLCategoryObjCKit/Button (= 0.4.1)
+    - SLCategoryObjCKit/Calendar (= 0.4.1)
+    - SLCategoryObjCKit/Color (= 0.4.1)
+    - SLCategoryObjCKit/Date (= 0.4.1)
+    - SLCategoryObjCKit/Foundation (= 0.4.1)
+    - SLCategoryObjCKit/Image (= 0.4.1)
+    - SLCategoryObjCKit/ImageView (= 0.4.1)
+    - SLCategoryObjCKit/MutableArray (= 0.4.1)
+    - SLCategoryObjCKit/MutableDictionary (= 0.4.1)
+    - SLCategoryObjCKit/String (= 0.4.1)
+    - SLCategoryObjCKit/TextField (= 0.4.1)
+    - SLCategoryObjCKit/View (= 0.4.1)
+    - SLCategoryObjCKit/Window (= 0.4.1)
+  - SLCategoryObjCKit/Array (0.4.1)
+  - SLCategoryObjCKit/BarButtonItem (0.4.1)
+  - SLCategoryObjCKit/Button (0.4.1)
+  - SLCategoryObjCKit/Calendar (0.4.1)
+  - SLCategoryObjCKit/Color (0.4.1)
+  - SLCategoryObjCKit/Date (0.4.1)
+  - SLCategoryObjCKit/Foundation (0.4.1)
+  - SLCategoryObjCKit/Image (0.4.1)
+  - SLCategoryObjCKit/ImageView (0.4.1):
     - AFNetworking/Reachability
     - SDWebImage
-  - SLCategoryObjCKit/MutableArray (0.3.1)
-  - SLCategoryObjCKit/MutableDictionary (0.3.1)
-  - SLCategoryObjCKit/String (0.3.1)
-  - SLCategoryObjCKit/TextField (0.3.1)
-  - SLCategoryObjCKit/View (0.3.1)
-  - SLCategoryObjCKit/Window (0.3.1)
+  - SLCategoryObjCKit/MutableArray (0.4.1)
+  - SLCategoryObjCKit/MutableDictionary (0.4.1)
+  - SLCategoryObjCKit/String (0.4.1)
+  - SLCategoryObjCKit/TextField (0.4.1)
+  - SLCategoryObjCKit/View (0.4.1)
+  - SLCategoryObjCKit/Window (0.4.1)
 
 DEPENDENCIES:
   - SLCategoryObjCKit (from `../`)
@@ -50,7 +52,7 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
   SDWebImage: ecc03494e973b93b80213649d32175f8d2d17d4d
-  SLCategoryObjCKit: 0b931f43f18c50dd92bfa846637560def9042454
+  SLCategoryObjCKit: 8d90868bb137a24404b694afeeb9a700717825ec
 
 PODFILE CHECKSUM: 6c7ac920b5fb0ea60d1908e5ebb3931032505788
 
