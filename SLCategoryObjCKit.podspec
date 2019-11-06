@@ -114,12 +114,16 @@ Pod::Spec.new do |s|
             foundation.source_files = 'SLCategoryObjCKit/Classes/Foundation/*.{h,m}'
         end
         
-        s.subspec 'MutableArray' do |array|
-            array.source_files = 'SLCategoryObjCKit/Classes/MutableArray/*.{h,m}'
+        s.subspec 'MutableArray' do |mutableArray|
+            mutableArray.source_files = 'SLCategoryObjCKit/Classes/MutableArray/*.{h,m}'
         end
         
-        s.subspec 'MutableDictionary' do |dict|
-            dict.source_files = 'SLCategoryObjCKit/Classes/MutableDictionary/*.{h,m}'
+        s.subspec 'Array' do |array|
+            array.source_files = 'SLCategoryObjCKit/Classes/Array/*.{h,m}'
+        end
+        
+        s.subspec 'MutableDictionary' do |mutableDictionary|
+            mutableDictionary.source_files = 'SLCategoryObjCKit/Classes/MutableDictionary/*.{h,m}'
         end
         
     end

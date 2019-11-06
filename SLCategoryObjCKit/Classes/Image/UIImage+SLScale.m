@@ -95,5 +95,11 @@
     return newImage;
 }
 
+- (UIImage *)sl_resizableImage
+{
+    CGFloat w = self.size.width * 0.5f - 1;
+    CGFloat h = self.size.height * 0.5f - 1;
+    return [self resizableImageWithCapInsets:UIEdgeInsetsMake(h, w, h, w)];
+}
 
 @end
