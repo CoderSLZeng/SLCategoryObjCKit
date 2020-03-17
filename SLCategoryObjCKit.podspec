@@ -31,6 +31,7 @@ Pod::Spec.new do |s|
     10.View
     11.Window
     12.Object
+    13.TabBarController
     等分类。
     DESC
     
@@ -141,6 +142,10 @@ Pod::Spec.new do |s|
         
         s.subspec 'Object' do |object|
             object.source_files = 'SLCategoryObjCKit/Classes/Object/*.{h,m}'
+        end
+
+        s.subspec 'TabBarController' do |tabBarController|
+            tabBarController.source_files = 'SLCategoryObjCKit/Classes/TabBarController/*.{h,m}'
         end
     end
     # s.public_header_files = 'Pod/Classes/**/*.h'
