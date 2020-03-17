@@ -18,7 +18,20 @@ Pod::Spec.new do |s|
     #   * Finally, don't worry about the indent, CocoaPods strips it!
     
     s.description      = <<-DESC
-    封装了BarButtonItem、Button、Calendar、Color、Date、Image、ImageView、String、TextField、View、Window等分类。
+    封装了
+    1.BarButtonItem
+    2.Button
+    3.Calendar
+    4.Color
+    5.Date
+    6.Image
+    7.ImageView
+    8.String
+    9.TextField
+    10.View
+    11.Window
+    12.Object
+    等分类。
     DESC
     
     s.homepage         = 'https://github.com/CoderSLZeng/SLCategoryObjCKit'
@@ -126,6 +139,9 @@ Pod::Spec.new do |s|
             mutableDictionary.source_files = 'SLCategoryObjCKit/Classes/MutableDictionary/*.{h,m}'
         end
         
+        s.subspec 'Object' do |object|
+            object.source_files = 'SLCategoryObjCKit/Classes/Object/*.{h,m}'
+        end
     end
     # s.public_header_files = 'Pod/Classes/**/*.h'
     # s.frameworks = 'UIKit', 'MapKit'
