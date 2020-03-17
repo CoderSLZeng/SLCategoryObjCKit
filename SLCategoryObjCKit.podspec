@@ -32,7 +32,8 @@ Pod::Spec.new do |s|
     11.Window
     12.Object
     13.TabBarController
-    14.mutableURLRequest
+    14.MutableURLRequest
+    15.Label
     等分类。
     DESC
     
@@ -151,6 +152,10 @@ Pod::Spec.new do |s|
         
         s.subspec 'MutableURLRequest' do |mutableURLRequest|
             mutableURLRequest.source_files = 'SLCategoryObjCKit/Classes/MutableURLRequest/*.{h,m}'
+        end
+
+        s.subspec 'Label' do |label|
+            label.source_files = 'SLCategoryObjCKit/Classes/Label/*.{h,m}'
         end
     end
     # s.public_header_files = 'Pod/Classes/**/*.h'
